@@ -63,7 +63,7 @@ html {
 }
 
 #Sidenav a:hover {
-  color: #9999CC;
+  color: #333366;
 }
 
 #Sidenav i {
@@ -108,6 +108,12 @@ html {
   color: white;
   font-family: 'Do Hyeon', sans-serif;
   margin-top: 5%;
+}
+
+.imageFelid {
+  position: absolute;
+  top: 25%;
+  right: 10%;
 }
 
 /* 반응형 웹 디자인 사이즈 데스크톱 우선 */
