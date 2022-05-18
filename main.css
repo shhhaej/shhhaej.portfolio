@@ -6,19 +6,12 @@
   box-sizing: border-box;
 }
 
-
 body {
-  /* font-family: ; */
+  /* font-family: 'Lato', sans-serif; */
+  font-family: 'Black Han Sans', sans-serif;
   height: 100vh;
+  overflow-x: hidden; 
   background: linear-gradient(90deg, #333366 53%, #FF9933 50%);
-} 
-
-button {
-  background: none;
-  color:  inherit;
-  border: none;
-  cursor: pointer;
-  outline: inherit;
 }
 
 a {
@@ -38,7 +31,15 @@ html {
   font-size: 62.5%; /* 1rem을 10px로 변환(원래는 16px) */
 }
 
-#Sidenav {
+button {
+  background: none;
+  color:  inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#sideNav {
   height: 100%;
   width: 120px;
   position: fixed;
@@ -46,17 +47,18 @@ html {
   top: 0;
   left: 0;
   background-color: #FF9933;
-  overflow-x: hidden;
+  overflow-Y: hidden;
   padding-top: 20px;
   transition: all var(--animation-duration) ease-in-out;
   /* 스크롤 와이가 렌더링된 높이 보다 크면 navbar 접히는 애니메이션 시간 300ms적용 */
 }
 
-#Sidenav a {
+#sideNav a {
   padding: 6px 8px 6px 16px;
-  text-decoration: none;
+  /* text-decoration: none; */
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 300;
+  letter-spacing: 1.5px;
   color: white;
   display: block;
   writing-mode: vertical-lr;
@@ -64,143 +66,259 @@ html {
   margin: 80px auto;
 }
 
-#Sidenav a:hover {
+#sideNav a:hover {
   color: #333366;
 }
 
-#Sidenav i {
+/* sideNav icon direction  */
+#sideNav i {
   font-size: 33px;
   transform: rotate(90deg);
 }
 
-.NavBarsBtn {  /* burger icon */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 13px;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay > a:hover, 
+.overlay > a:focus {
+  color: #f1f1f1;
+}
+
+.openbtn {
   position: absolute;
-  display: none;
-  top: 18px;
-  right: 32px;
-  font-size: 24px;
+  top: 20px;
+  right: 45px;
   color: white;
 }
 
-.NavBarsBtn div {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(226, 226, 226);
-  margin: 5px;
-  transition: all 0.3s ease;
+.overlay 
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
-.ContentWrap {
-  height: 100vh;
-  border: 1px solid #333;
+.contentWrap {
+  height: auto;
   padding-left: 7%;
+  z-index: 5;
 }
 
-.TextFleid {
+.textField {
   position: relative;
   display: flex;
-  width: 100%;
-  align-items: center;
-  border: 3px solid #FFFFCC;
-  height: auto;
-}
-
-.TextWrap {
-  position: absolute;
   margin-top: 15%;
+  margin-bottom: 40%;
   margin-left: 3%;
+  align-items: center;
   font-family: 'Black Han Sans', sans-serif;
 }
 
-.h2Wrap {
-  font-size: 50px;
-  color: #FFFFCC;
-}
-
-.h1Wrap {
+.textField .h1 {
   font-size: 80px;
   color: white;
 }
 
-.TextWrap p {
-  font-size: 25px;
+.textField .h2 {
+  font-size: 50px;
+  color: #FFFFCC;
+}
+
+.textWrap p {
+  font-size: 30px;
   color: white;
   font-family: 'Do Hyeon', sans-serif;
   margin-top: 5%;
+  padding-bottom: 10%;
 }
 
-.imageFelid {
-  position: absolute;
-  top: 25%;
-  right: 10%;
+.resumebtn {
+  padding: 0 2.5em;
+  font-size: 25px;
+  color: #333366;
+  overflow: hidden;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background: #fff;
+  font-family: 'Black Han Sans', sans-serif;
 }
 
-/* 반응형 웹 디자인 사이즈 데스크톱 우선 */
-@media ( max-width: 1023px ) {
-  .Sidenav {
-    width: 60%;
-  }
-}
-
-@media ( max-width: 991px ) {
-  body {
-    overflow-x: hidden;
-  }
-
-  #Sidenav {
-    display: flex;
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    height: 92vh;
-    /* background-color: #504954; */
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    writing-mode: vertical-lr;
-    transform: rotate(90deg);
-    margin: 80px auto;
-  }
-
-  #Sidenav li {
-    /* opacity: 0; */
-  }
-
-  .NavBarsBtn {
-    display: block;
-  }
-  
-  /* #Sidenav-active {
-    transform: translateY(0%);
-  }
-  
-  @keyframes identifier {
-    from {
-      opacity: 0;
-      transform: translateX(5px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  } */
-}
-
-/* .NavBarsBtn .line1 {
-  transform: rotate(-45deg); translate: (-5px, 6px);
-}
-
-.NavBarsBtn .line2 {
+.resumebtn > span {
+  display: inline-block;
+  padding: 0.8em 0;
   opacity: 0;
+  font-size: 25px;
+  color: #fff;
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  font-family: 'Black Han Sans', sans-serif;
 }
 
-.NavBarsBtn .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-} */
+.resumebtn::before {
+  content: attr(data-text);
+  position: absolute;
+  padding: 1em 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
 
-@media screen and (max-height: 450px) {
-  #Sidenav{display: none;} /* 화면 축소 시 메뉴바를 감추는 것 */
-  a.Sidenav{display: inline;} /* 메뉴 아이콘만 생성하는 것 */
-  a.Sidenav:hover + #Sidenav{display: inline;} /* 아이콘에 마우스 오버했을 때 메뉴를 드러나게 하기 */
+.resumebtn:hover {
+  background-color: #FF9933;
+}
+
+.resumebtn:hover::before {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.resumebtn:hover > span {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.resumebtn:hover > span:nth-child(1) {
+  -webkit-transition-delay: 0.045s;
+  transition-delay: 0.045s;
+}
+
+.resumebtn:hover > span:nth-child(2) {
+  -webkit-transition-delay: 0.09s;
+  transition-delay: 0.09s;
+}
+
+.resumebtn:hover > span:nth-child(3) {
+  -webkit-transition-delay: 0.135s;
+  transition-delay: 0.135s;
+}
+
+.resumebtn:hover > span:nth-child(4) {
+  -webkit-transition-delay: 0.18s;
+  transition-delay: 0.18s;
+}
+
+.resumebtn:hover > span:nth-child(5) {
+  -webkit-transition-delay: 0.225s;
+  transition-delay: 0.225s;
+}
+
+.imageField {
+  top: 0.5%;
+  right: 15%;
+  width: 100%;
+  height: auto;
+  max-width: 430px;
+  margin-left: 18%;
+}
+
+.hjMemoji {
+  max-width: 100%;
+  height: auto;
+}
+
+.aboutWrap {
+  width: 80%;
+  height: 100px;
+  border: 4px solid #FF9933;
+  border-radius: 25px;
+  /* padding: 20%; */
+  padding: 3% 100px 40% 100px;
+  margin-left: 10%;
+  margin-bottom: 80px;
+  background-color: #333366;
+  box-shadow: 15px 15px 15px #333;
+}
+
+.aboutWrap .h2 {
+  /* margin-bottom: 80%; */
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-align: center;
+}
+
+.aboutWrap p {
+  font-size: 25px;
+  color: #FFFFCC;
+}
+
+/* 반응형 웹 디자인 사이즈 데스크톱 우선순위 */
+@media screen and (min-width: 701px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 701px) {
+  #sideNav {
+    display: none;
+  }
+
+  .openbtn {
+    display: flex;
+  }
+
+  .contentWrap {
+    padding-left: 3%;
+  }
+
+  .textField {
+    margin-top: 50%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .h1Wrap {
+    font-size: 35px;
+  }  
+
+  .h2Wrap {
+    font-size: 23px;
+  }
+
+  .textWrap p {
+    font-size: 20px;
+  }
+
+  .imageField {
+    margin-left: 2%;
+  }
 }
