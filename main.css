@@ -41,6 +41,7 @@ button {
 
 #sideNav {
   height: 100%;
+  /* height: auto; */
   width: 120px;
   position: fixed;
   z-index: 1; /* 제일 상단에 위치설정 */
@@ -55,7 +56,7 @@ button {
 
 #sideNav a {
   padding: 6px 8px 6px 16px;
-  /* text-decoration: none; */
+  /* padding: auto; */
   font-size: 22px;
   font-weight: 300;
   letter-spacing: 1.5px;
@@ -131,13 +132,15 @@ button {
 .contentWrap {
   height: auto;
   padding-left: 7%;
+  padding-bottom: 0%;
   z-index: 5;
 }
 
 .textField {
   position: relative;
   display: flex;
-  margin-top: 15%;
+  /* margin-top: 15%; */
+  margin-top: 12%;
   margin-bottom: 40%;
   margin-left: 3%;
   align-items: center;
@@ -245,7 +248,7 @@ button {
   width: 100%;
   height: auto;
   max-width: 430px;
-  margin-left: 18%;
+  margin-left: 23%;
 }
 
 .hjMemoji {
@@ -255,19 +258,19 @@ button {
 
 .aboutWrap {
   width: 80%;
-  height: 100px;
+  height: auto;
   border: 4px solid #FF9933;
   border-radius: 25px;
-  /* padding: 20%; */
-  padding: 3% 100px 40% 100px;
+  padding: 3% 100px 10% 100px;
   margin-left: 10%;
-  margin-bottom: 80px;
+  margin-bottom: 80%;
   background-color: #333366;
   box-shadow: 15px 15px 15px #333;
 }
 
 .aboutWrap .h2 {
-  /* margin-bottom: 80%; */
+  padding-top: 5%;
+  padding-bottom: 5%;
   font-size: 70px;
   font-weight: 400;
   letter-spacing: 2.5px;
@@ -279,6 +282,53 @@ button {
   font-size: 25px;
   color: #FFFFCC;
 }
+
+.contactWrap {
+  width: auto;
+  height: 100%;
+  /* padding: 3% 100px 10% 100px; */
+  padding: 10%;
+  background-color: #FF9933;
+  box-shadow: -10px -10px 80px #333 ;
+  text-align: center;
+}
+
+.contactWrap .h2 {
+  padding-top: 3%;
+  padding-bottom: 5%;
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color: #fff;
+}
+
+.contactWrap .h3 {
+  font-size: 45px;
+  color: #FFFFCC;
+  padding-bottom: 3%;
+}
+
+.emailbtn {
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  color: #FFFFCC;
+}
+
+footer {
+  position: relative;
+  background-color: #FF9933;
+  padding-bottom: 5%;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+} 
+
+footer .h3 {
+  width: 80%;
+  border: thin solid #b9b8b8;
+  margin-left: 10%;
+  margin-bottom: 3%;
+} 
 
 /* 반응형 웹 디자인 사이즈 데스크톱 우선순위 */
 @media screen and (min-width: 701px) {
