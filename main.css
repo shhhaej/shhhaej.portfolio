@@ -257,35 +257,92 @@ button {
 }
 
 .aboutWrap {
+  position: relative;
   width: 80%;
   height: auto;
   border: 4px solid #FF9933;
   border-radius: 25px;
-  padding: 3% 100px 10% 100px;
+  padding: 3% 100px 8% 100px;
   margin-left: 10%;
   margin-bottom: 80%;
   background-color: #333366;
   box-shadow: 15px 15px 15px #333;
 }
 
-.aboutWrap .h2 {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 70px;
+.aboutWrap h2 {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: 80px;
   font-weight: 400;
   letter-spacing: 2.5px;
   color: #fff;
   text-align: center;
 }
 
-.aboutWrap p {
-  font-size: 25px;
-  color: #FFFFCC;
+.hjPhoto {
+  float: left;
+  margin-right: 3%;
+  clear: both;
+  border-radius: 10px;
 }
+
+.aboutWrap p {
+  margin-top: 1%;
+  font-size: 35px;
+  color: #FFFFCC;
+  letter-spacing: 1.8px;
+  line-height: 170%;
+  text-align: left;
+}
+
+
+
+
+
+
+
+.skillWrap {
+  width: auto;
+  height: auto;
+}
+
+.skillWrap h2 {
+  padding-top: 3%;
+  padding-bottom: 5%;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-align: left;
+  margin-left: 12%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 300px;
+  width: 20%;
+  height: auto;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+
+.icons img {
+  margin-right: 25px;
+  margin-bottom: 25%;
+  /* transition: all var(--animation-duration) ease; */
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+  transition: .5s;
+}
+
 
 .contactWrap {
   width: auto;
-  height: 100%;
+  height: auto;
   /* padding: 3% 100px 10% 100px; */
   padding: 10%;
   background-color: #FF9933;
@@ -293,10 +350,10 @@ button {
   text-align: center;
 }
 
-.contactWrap .h2 {
+.contactWrap h2 {
   padding-top: 3%;
   padding-bottom: 5%;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 400;
   letter-spacing: 2.5px;
   color: #fff;
@@ -317,8 +374,8 @@ button {
 footer {
   position: relative;
   background-color: #FF9933;
-  padding-bottom: 5%;
-  font-size: 15px;
+  padding-bottom: 3%;
+  font-size: 17px;
   color: #fff;
   text-align: center;
 } 
@@ -327,7 +384,7 @@ footer .h3 {
   width: 80%;
   border: thin solid #b9b8b8;
   margin-left: 10%;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 } 
 
 /* 반응형 웹 디자인 사이즈 데스크톱 우선순위 */
