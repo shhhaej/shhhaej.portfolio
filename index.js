@@ -18,10 +18,10 @@ $(function() {
     dots: true,
     dotsClass: "slick-dots", //아래 나오는 페이지네이션 css class 지정
     vertical: false,
-    // prevArrow: "<button type= 'button' class='slick-prev'>prev</button>",
-    // nextArrow: "<button type= 'button' class='slick-next'>next</button>",
-    prevArrow: '<span class="prev" href="#"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></span>',
-    nextArrow: '<span class="next" href="#"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></span>',
+    prevArrow: "<button type= 'button' class='slick-prev'>prev</button>",
+    nextArrow: "<button type= 'button' class='slick-next'></button>",
+    // prevArrow: '<span class="prev" href="#"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></span>',
+    // nextArrow: '<span class="next" href="#"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></span>',
     draggable: true, 
     responsive: [ //반응형 웹 구현 옵션
       {

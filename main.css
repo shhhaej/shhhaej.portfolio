@@ -401,14 +401,14 @@ button {
 
 .sub {
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 6%;
   color: #333366;
   font-size: 30px;
   font-weight: 100;
   text-align: center;
 }
 
-.prev {
+/* .prev {
   display: block;
   position: absolute;
   top: 50%;
@@ -430,16 +430,11 @@ button {
   color: white;
   cursor: pointer;
   transform: translateY(-50%);
-}
+} */
 
-.prev::before, .next::before {
-  background-color: red !important;
+.slick-prev {
+  
 }
-
-.slick-dots {
-  font-size: 10rem;
-}
-
 
 
 
