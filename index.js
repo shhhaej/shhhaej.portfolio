@@ -8,6 +8,73 @@ function closeNav() {
 }
 
 
+
+//로딩중 화면표시
+function loadingProcess() {
+  openLoading('./img/hj.gif');
+
+  //타이머를 이용해 로딩창 종료
+  setTimeout(closeLoading, 3000);
+
+}
+
+//로딩창 키는 함수
+function openLoading(gif) {
+
+  //화면 높이와 너비를 구함
+  var maskHeight = $(document).height();
+  var maskWidth = window.document.body.clientWidth;
+
+  //출력할 마스크를 설정함
+  var mask = "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+  
+  //로딩 이미지 주소 및 옵션
+  var loadingImg = '';
+  loadingImg += "<div id='loadingImg' style='position:absolute; left:40%; top:30%; display:none; z-index:10000;'>";
+  loadingImg += "<img src='./img/hj.gif'/>";
+  loadingImg += "</div>";
+
+  //레이어 추가
+  $('body')
+      .append(mask)
+      .append(loadingImg);
+
+  //마스크의 높이와 너비로 전체 화면을 채움
+  $('#mask').css({
+      'width' : maskWidth
+      , 'height': maskHeight
+      // , 'opacity' : '0.9'
+      , 'background' : '#ff9933'
+  });
+
+   //마스크 표시
+  $('#mask').show();
+
+  //로딩 이미지 표시
+  $('#loadingImg').show();
+}
+
+  //로딩창 끄는 함수
+  function closeLoading() {
+  $('#mask, #loadingImg').hide();
+  $('#mask, #loadingImg').empty();
+}
+
+
+//스크롤 이동
+$(function(){
+    $("a").on("click", function(){
+      var divName = $(this).attr("id"),
+          topPosition = $("." + divName).offset().top;
+      $('html, body').animate({
+          scrollTop: topPosition - 55
+      }, 700);
+      return false; //리턴펄스로 스크롤이 최상위로 갔다가 돌아오는 현상 없어짐
+    });
+});
+
+
+
 // slick 
 $(function() {
   $('.sliderWrap').slick({

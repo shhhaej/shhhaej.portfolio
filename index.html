@@ -5,30 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hyejin's Portfolio!</title>
-  <link rel="icon" type="image/png" sizes="300X200" href="../img/favicon.png">
+  <link rel="icon" type="image/png" sizes="100X50" href="../img/favicon.png">
   <link rel="stylesheet" href="main.css"> <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="slick-theme.css">
   <script src="https://kit.fontawesome.com/82daf2e916.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <!-- jquery -->
-  
+
   <style>
   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap');
   </style>
 </head>
+
 <body>
   <!-- navigation bar -->
   <div id="sideNav">
     <ul>
-      <li><a href="#">HYEJIN</a></li>
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="#">SKILLS</a></li>
-      <li><a href="#">PORTFOLIO</a></li>
-      <li><a href="#">CONTACT</a></li> 
-      <!-- <li><a href="#"><i class="fa-brands fa-github"></i></a></li> -->
+      <li><a href="#" id="contextWrap" onclick="loadingProcess();">HYEJIN</a></li>
+      <li><a href="#" id="aboutWrap">ABOUT</a></li>
+      <li><a href="#" id="skillsWrap">SKILLS</a></li>
+      <li><a href="#" id="portfolioWrap">PORTFOLIO</a></li>
+      <li><a href="#" id="contactWrap">CONTACT</a></li> 
     </ul>
   </div>
+
+  
 
   <!-- Screen gets smaller the burger button change -->
   <!-- overlay -->
@@ -36,38 +38,39 @@
     <!-- Button to close the overlay navigation -->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-      <a href="#">HYEJIN</a>
-      <a href="#">ABOUT</a>
-      <a href="#">SKILLS</a>
-      <a href="#">PORTFOLIO</a>
-      <a href="#">CONTACT</a>
-      <!-- <a href="#"><i class="fa-brands fa-github"></i></a> -->
+      <a href="#home">HYEJIN</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#contact">CONTACT</a>
     </div>
   </div>
   <!-- Button to open the overlay navigation -->
   <span style="font-size:40px; cursor:pointer; right: 3%;" class="openbtn" onclick="openNav()">&#9776;</span>
 
-  <!-- Main content text field -->
+
+
+  
+  <!-- Main content section -->
   <div class="contentWrap">
     <div class="textField">
       <div class="textWrap">
         <div class="h2">안녕하세요, 저는</div>
         <div class="h1">사혜진입니다.</div>
         <div class="h2">프론트엔드 신입에 지원하였습니다.</div>
-        <!-- <p>문제를 해결하는데 열정적입니다. <br> 호기심이 많고 하나에 꽂히면 끝까지 파고드는 성격이 저의 장점입니다.</p> -->
         <p>Fromt-end Developer <br>Web Publisher <br>Web Designer</p>
         <button class="resumebtn" data-text="이력서  보기">
           <span>이</span><span>력</span><span>서</span>&nbsp;<span>보</span><span>기</span>
         </button>
       </div> 
       
-      <!-- Main content image field -->
+      <!-- Main content image section -->
       <div class="imageField">
         <img class="hjMemoji" src="../img/mainicon.png" width="500">
       </div> 
     </div>  
 
-    <!-- About me field -->
+    <!-- About me section -->
     <div class="aboutWrap">
       <h2>ABOUT</h2>
         <img class="hjPhoto" src="../img/about_photo2.png" width="420">
@@ -91,8 +94,8 @@
         </div>
     </div>
 
-    <!-- My skills field -->
-    <div class="skillWrap">
+    <!-- My skills section -->
+    <div class="skillsWrap">
       <h2>MY SKILLS</h2>
       <div class="icons">
         <img src="../img/html_icon.png" width="140" alt="html5">
@@ -121,7 +124,7 @@
     </div>
 
 
-    <!-- Portfolio field -->
+    <!-- Portfolio section -->
     <div class="portfolioWrap">
       <h2>PORTFOLIO</h2>
       <div class="sliderWrap">
@@ -166,7 +169,7 @@
 
     
 
-    <!-- Contact field -->
+    <!-- Contact section -->
     <div class="contactWrap">
       <!-- <div class="h2">CONTACT</div> -->
       <h2>CONTACT</h2>
