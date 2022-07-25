@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //When change window screen size view, show burgerNav
 function openNav() {
   document.getElementById("burgerNav").style.height = "100%";
@@ -7,6 +6,18 @@ function openNav() {
 function closeNav() {
   document.getElementById("burgerNav").style.height = "0%";
 }
+
+
+
+//textSection 화면 효과
+$(function() {
+  $("a").on("click", function() { 
+    $(".textSection").fadeOut(1000).delay(1000).fadeIn(2000);
+          // a가 textSection 요소를 1초에 걸쳐 사라지게 하고
+          // 1초의 지연시간 뒤에 다시 2초 걸쳐 나타남
+  });
+})
+
 
 
 //로딩중 화면표시
@@ -41,10 +52,10 @@ function openLoading(gif) {
 
   //마스크의 높이와 너비로 전체 화면을 채움
   $('#mask').css({
-      'width' : maskWidth
-      , 'height': maskHeight
-      // , 'opacity' : '0.9'
-      , 'background' : '#ff9933'
+      'width' : maskWidth,
+      'height': maskHeight,
+      // 'opacity' : '0.9'
+      'background' : '#ff9933',
   });
 
    //마스크 표시
@@ -61,7 +72,8 @@ function openLoading(gif) {
 }
 
 
-//스크롤 이동
+
+//네비개이션 메뉴 클릭시 해당 섹션 이동
 $(function(){
     $("a").on("click", function(){
       var divName = $(this).attr("id"),
@@ -75,7 +87,7 @@ $(function(){
 
 
 
-// slick 
+// slick slider
 $(function() {
   $('.sliderWrap').slick({
     slidesToShow: 3,
