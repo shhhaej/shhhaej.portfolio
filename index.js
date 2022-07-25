@@ -8,7 +8,6 @@ function closeNav() {
 }
 
 
-
 //로딩중 화면표시
 function loadingProcess() {
   openLoading('./img/hj.gif');
@@ -30,7 +29,7 @@ function openLoading(gif) {
   
   //로딩 이미지 주소 및 옵션
   var loadingImg = '';
-  loadingImg += "<div id='loadingImg' style='position:absolute; left:40%; top:30%; display:none; z-index:10000;'>";
+  loadingImg += "<div id='loadingImg' style='position:absolute; left:37%; top:30%; display:none; z-index:10000;'>";
   loadingImg += "<img src='./img/hj.gif'/>";
   loadingImg += "</div>";
 
@@ -87,8 +86,6 @@ $(function() {
     vertical: false,
     prevArrow: "<button type= 'button' class='slick-prev'>prev</button>",
     nextArrow: "<button type= 'button' class='slick-next'></button>",
-    // prevArrow: '<span class="prev" href="#"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></span>',
-    // nextArrow: '<span class="next" href="#"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></span>',
     draggable: true, 
     responsive: [ //반응형 웹 구현 옵션
       {
