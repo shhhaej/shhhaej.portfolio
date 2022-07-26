@@ -43,7 +43,7 @@
   <!-- overlay -->
   <div id="burgerNav" class="overlay">
     <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
       <a href="#home">HYEJIN</a>
       <a href="#about">ABOUT</a>
@@ -53,35 +53,36 @@
     </div>
   </div>
   <!-- Button to open the overlay navigation -->
-  <span style="font-size:40px; cursor:pointer; right: 3%;" class="openbtn" onclick="openNav()">&#9776;</span>
+  <span style="font-size:40px; cursor:pointer; right: 3%;" class="openBtn" onclick="openNav()">&#9776;</span>
 
 
   <!-- Main content section -->
   <div class="contentWrap">
-    <div class="textSection" data-aos="fade-down" data-aos-duration="1000">
-    <!-- <div class="textSection"> -->
+    <div class="textSection">
+
+      <!-- <div class="textSection"> -->
       <div class="textWrap">
         <div class="h2">안녕하세요, 저는</div>
         <div class="h1">사혜진입니다.</div>
         <div class="h2">프론트엔드 신입에 지원하였습니다.</div>
         <p>Fromt-end Developer <br>Web Publisher <br>Web Designer</p>
-        <button class="resumebtn" data-text="이력서  보기">
-          <span>이</span><span>력</span><span>서</span>&nbsp;<span>보</span><span>기</span>
+        <button class="maileBtn" data-text="SEND MAILE" onclick="location.href='mailto:hyejin11sa@gmail.com';">
+            <span>S</span><span>E</span><span>N</span><span>D</span>&nbsp;<span>M</span><span>A</span><span>I</span><span>L</span><span>E</span>
         </button>
       </div> 
+
       <!-- Main content image section -->
-      <div class="imageSection" data-aos="fade-down" data-aos-duration="1000">
-      <!-- <div class="imageSection"> -->
-        <img class="hjMemoji" src="../img/mainicon.png" width="500">
+      <div class="imageSection">
+        <img class="hjMemoji" src="../img/mainicon.png">
       </div> 
     </div>  
 
 
     <!-- About me section -->
-    <div class="aboutWrap" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
+    <div class="aboutWrap">
       <h2>ABOUT</h2>
-        <img class="hjPhoto" src="../img/about_photo2.png" width="420">
-        <div class="aboutText">
+        <img class="hjPhoto" src="../img/about_photo.png" width="420" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
+        <div class="aboutText" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
           <p>꿈을 디자인하는 프론트엔드 개발자 사혜진입니다.
             <br>평소에도 무언가를 직접 만드는걸 즐겼으며, 컴퓨터 언어를 사용해 시각적 아름다움을 자아내는 것에 큰 매력을 느껴 웹 디자인을 겸비한 웹 개발자가 되기로 결심했습니다.
             <br>나아가 개발자로서의 역량을 끊임없이 키워 웹뿐만 아니라 다양한 영역에서 창의적이고 신선한 콘텐츠를 구현해 내는 깨어있는 개발자로 성장해나가고 싶습니다.
@@ -175,8 +176,8 @@
     <div class="contactWrap" data-aos="fade-up" data-aos-duration="1000">
       <h2>CONTACT</h2>
       <div class="h3">Let's talk &nbsp;<i class="fa-solid fa-face-smile-wink"></i></div>
-      <div class="emailbtn">
-        <a href="mailto:hyejin11sa@gmail.com">hyejin11sa@gmail.com</a>
+      <div class="kakaoBtn">
+          <a href="https://open.kakao.com/o/sFbl2ase">- open KAKAO -</a>
       </div>
     </div>  
 

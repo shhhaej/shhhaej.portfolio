@@ -9,24 +9,12 @@ function closeNav() {
 
 
 
-//textSection 화면 효과
-$(function() {
-  $(".home").on("click", function() { 
-    $(".textSection").fadeOut(1000).delay(1000).fadeIn(2000);
-          // a가 textSection 요소를 1초에 걸쳐 사라지게 하고
-          // 1초의 지연시간 뒤에 다시 2초 걸쳐 나타남
-  });
-})
-
-
-
 //로딩중 화면표시
 function loadingProcess() {
-  openLoading('./img/hj.gif');
+  openLoading('./img/hj_loading.gif');
 
   //타이머를 이용해 로딩창 종료
   setTimeout(closeLoading, 3000);
-
 }
 
 //로딩창 키는 함수
@@ -42,7 +30,7 @@ function openLoading(gif) {
   //로딩 이미지 주소 및 옵션
   var loadingImg = '';
   loadingImg += "<div id='loadingImg' style='position:absolute; left:37%; top:30%; display:none; z-index:10000;'>";
-  loadingImg += "<img src='./img/hj.gif'/>";
+  loadingImg += "<img src='./img/hj_loading.gif'>";
   loadingImg += "</div>";
 
   //레이어 추가
@@ -73,7 +61,18 @@ function openLoading(gif) {
 
 
 
-//네비개이션 메뉴 클릭시 해당 섹션 이동
+//textSection 화면 효과
+$(function() {
+  $("#contextWrap").on("click", function() { 
+    $(".textSection").fadeOut(1000).delay(1000).fadeIn(2000);
+          // a가 textSection 요소를 1초에 걸쳐 사라지게 하고
+          // 1초의 지연시간 뒤에 다시 2초 걸쳐 나타남
+  });
+})
+
+
+
+//네비게이션 메뉴 클릭시 해당 섹션 이동
 $(function(){
     $("a").on("click", function(){
       var divName = $(this).attr("id"),
