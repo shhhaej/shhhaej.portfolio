@@ -280,7 +280,7 @@ button {
   height: auto;
   border: 6px solid #FF9933;
   border-radius: 25px;
-  padding: 3% 100px 4% 100px;
+  padding: 3% 100px 3% 100px;
   margin-left: 10%;
   margin-bottom: 30%;
   background-color: #333366;
@@ -313,21 +313,55 @@ button {
   text-align: left;
 }
 
-.git {
-  margin-right: 10%;
+.aboutGit {
+  display: inline-block;
+  font-family: 'Black Han Sans', sans-serif;
   font-size: 25px;
   color: #6e6ed1;
+  text-align: center;
   margin-top: 2%;
+  line-height: 40px;
 }
 
-.blog {
+.aboutGit::after { /* after 가상요소 */
+  display: block; /* a요소를 블록 요소라고 선언 */
+  width: 100%; /* 카테고리 메뉴 밑줄의 크기를 동일하게 주기위해 설정 */
+  content: '';
+  border-bottom: solid 2px #fff;
+  transform: scaleX(0); /* 크기를 0으로 설정하므로써 평상시간 밑줄 없음 */
+  transition: transform 250ms ease-in-out; /* 변형방식 설정 */
+}
+
+.aboutGit:hover::after {
+  transform: scaleX(1); /* a속성에 hover시 기존 크기로 밑줄 설정 */
+}
+
+.aboutBlog {
+  float: right;
+  font-family: 'Black Han Sans', sans-serif;
   font-size: 25px;
   color: #fabd7f;
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 25%;
+  line-height: 40px;
+}
+
+.aboutBlog::after {
+  display: block;
+  width: 100%;
+  content: '';
+  border-bottom: solid 2px #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.aboutBlog:hover::after {
+  transform: scaleX(1);
 }
 
 .skillsWrap {
-  /* width: auto; */
-  width: 100%;
+  width: auto;
   height: auto;
   margin-bottom: 30%;
 }
@@ -340,7 +374,8 @@ button {
   letter-spacing: 2.5px;
   color: #fff;
   text-align: left;
-  margin-left: 12%;
+  /* margin-left: 12%; */
+  margin-left: 17%;
 }
 
 .icons {
@@ -348,7 +383,8 @@ button {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 20%;
-  margin-left: 15%;
+  /* margin-left: 15%; */
+  margin-left: 20%;
   margin-bottom: 5%;
 }
 
@@ -396,13 +432,12 @@ button {
   letter-spacing: 2.5px;
   color: #fff;
   text-align: left;
-  margin-left: 12%;
+  margin-left: 17%;
 }
 
 .sliderWrap {
-  width: 90%;
+  width: 80%;
   height: 550px;
-  margin-left: 5%;
   font-family: 'Lato', sans-serif;
 }
 

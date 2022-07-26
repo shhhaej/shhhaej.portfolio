@@ -11,7 +11,7 @@ function closeNav() {
 
 //textSection 화면 효과
 $(function() {
-  $("a").on("click", function() { 
+  $(".home").on("click", function() { 
     $(".textSection").fadeOut(1000).delay(1000).fadeIn(2000);
           // a가 textSection 요소를 1초에 걸쳐 사라지게 하고
           // 1초의 지연시간 뒤에 다시 2초 걸쳐 나타남
