@@ -7,10 +7,12 @@
 }
 
 body {
-  font-family: 'Black Han Sans', sans-serif;
+  width: 100vw;
   height: 100vh;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 2vw;
   overflow-x: hidden; 
-  background: linear-gradient(90deg, #333366 53%, #FF9933 50%);
+  background: linear-gradient(to right, #333366 53%, #FF9933 47%);
 }
 
 a {
@@ -81,9 +83,9 @@ button {
   transition: 0.5s;
 }
 
-.overlay-content {
+.overlay_Content {
   position: relative;
-  top: 25%;
+  top: 23%;
   width: 100%;
   text-align: center;
   margin-top: 30px;
@@ -106,21 +108,25 @@ button {
 }
 
 .openBtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
+  position: fixed;
+  top: 26px;
+  right: 27px;
   color: white;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .overlay 
 .closeBtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: 10px;
+  right: 14px;
+  font-size: 40px;
 }
 
 .contentWrap {
+  width: auto;
   height: auto;
   padding-left: 7%;
   padding-bottom: 0%;
@@ -138,22 +144,22 @@ button {
   font-family: 'Black Han Sans', sans-serif;
 }
 
-.textSection .h1 {
-  font-size: 80px;
-  color: white;
-}
-
-.textSection .h2 {
-  font-size: 50px;
-  color: #FFFFCC;
-}
-
 .textWrap {
   float: left;
   width: auto;
   height: auto;
   margin-left: 2%;
   margin-right: 17%;
+}
+
+.textWrap .h1 {
+  font-size: 80px;
+  color: white;
+}
+
+.textWrap .h2 {
+  font-size: 50px;
+  color: #FFFFCC;
 }
 
 .textWrap p {
@@ -527,6 +533,8 @@ button {
 }
 
 .kakaoBtn {
+  width: 20%;
+  margin-left: 40%;
   font-size: 35px;
   letter-spacing: 0.8px;
   color: #FFFFCC;
@@ -554,13 +562,27 @@ footer .h3 {
 
 
 /* 반응형 웹 디자인 사이즈 데스크톱 우선순위 */
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 765px) {
   .openBtn {
     display: none;
   }
+
+  .textSection {
+    margin-left: 5%;
+  }
+
+  .textWrap .h2 {
+    /* width: 60%; */
+  }
+
+  .imageSection {
+    position: absolute;
+    margin-left: 55%;
+  }
 }
 
-@media screen and (max-width: 701px) {
+
+@media screen and (max-width: 1047px) {
   #sideNav {
     display: none;
   }
@@ -574,17 +596,23 @@ footer .h3 {
   }
 
   .textSection {
-    margin-top: 50%;
+    margin-top: 30%;
     margin-left: 0;
     padding-left: 0;
   }
 
-  .h1Wrap {
-    font-size: 35px;
-  }  
+  .textWrap {
+    margin-left: 5%;
+    margin-right: 0;
+  }
 
-  .h2Wrap {
-    font-size: 23px;
+  .textWrap .h2 {
+    width: 60%;
+    font-size: 5vw;
+  }
+
+  .textWrap .h1{
+    font-size: 7vw;
   }
 
   .textWrap p {
@@ -592,6 +620,15 @@ footer .h3 {
   }
 
   .imageSection {
-    margin-left: 2%;
+    position: absolute;
+    top: 15%;
+    margin-left: 60%;
   }
 }
+
+/* @media screen and (max-width: 479px) {
+ .textWrap {
+    font-size: 14vw;
+ }
+
+} */
