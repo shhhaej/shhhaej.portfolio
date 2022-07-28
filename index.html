@@ -30,11 +30,11 @@
   <!-- navigation bar -->
   <div id="sideNav">
     <ul>
-      <li><a href="#" id="contextWrap" onclick="loadingProcess()">HYEJIN</a></li>
-      <li><a href="#" id="aboutWrap">ABOUT</a></li>
-      <li><a href="#" id="skillsWrap">SKILLS</a></li>
-      <li><a href="#" id="portfolioWrap">PORTFOLIO</a></li>
-      <li><a href="#" id="contactWrap">CONTACT</a></li> 
+      <li><a href="#home" id="contextWrap" onclick="loadingProcess()">HYEJIN</a></li>
+      <li><a href="#about" id="aboutWrap">ABOUT</a></li>
+      <li><a href="#skills" id="skillsWrap">SKILLS</a></li>
+      <li><a href="#portfolio" id="portfolioWrap">PORTFOLIO</a></li>
+      <li><a href="#contact" id="contactWrap">CONTACT</a></li> 
     </ul>
   </div>
 
@@ -44,11 +44,11 @@
   <div id="burgerNav" class="overlay">
     <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a> <!-- X icon -->
     <div class="overlay_Content">
-      <a href="#home">HYEJIN</a>
-      <a href="#about">ABOUT</a>
-      <a href="#skills">SKILLS</a>
-      <a href="#portfolio">PORTFOLIO</a>
-      <a href="#contact">CONTACT</a>
+      <a href="#home" id="contextWrap">HYEJIN</a>
+      <a href="#about" id="aboutWrap">ABOUT</a>
+      <a href="#skills" id="skillsWrap">SKILLS</a>
+      <a href="#portfolio" id="portfolioWrap">PORTFOLIO</a>
+      <a href="#contact" id="contactWrap">CONTACT</a>
     </div>
   </div>
   <span class="openBtn" onclick="openNav()">&#9776;</span> <!-- berger icon -->
@@ -111,16 +111,16 @@
         <ul data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
           <li>웹표준, 웹 접근성을 고려한<br>
               시멘틱 마크업 작업이 가능합니다.</li>
-          <br>
-          <br>
+          <!-- <br>
+          <br> -->
           <li>HTML과 CSS로 주어진 디자인 레이아웃에 따라<br>
               페이지를 디자인할 수 있습니다.</li>
-          <br>
-          <br>    
+          <!-- <br>
+          <br>     -->
           <li>CSS Media Query를 사용하여<br>
               반응형 웹을 만들 수 있습니다.</li>
-          <br>
-          <br>   
+          <!-- <br>
+          <br>    -->
           <li>Java Script, React를 사용하여<br>
               DOM 객체를 제어할 수 있습니다.</li>
         </ul>
@@ -178,9 +178,8 @@
 
     <!-- footer -->
     <footer>
-      <div class="h3"></div>
+      <div class="footerLine"></div>
         <p>
-          <!-- <br> -->
           <br>Designed and developed whit by Hyejin Sa. ⓒ 2022. All rights reserved
         </p>
     </footer>    

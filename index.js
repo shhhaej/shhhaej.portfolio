@@ -84,9 +84,20 @@ $(function(){
     });
 });
 
+$(function(){
+  $("#home").on("click", function(){
+    var divName = $(this).attr("id"),
+        topPosition = $("." + divName).offset().top;
+    $('html, body').animate({
+        scrollTop: topPosition - 55
+    }, 700);
+    return false; //리턴펄스로 스크롤이 최상위로 갔다가 돌아오는 현상 없어짐
+  });
+});
 
 
-// slick slider
+
+//slick slider
 $(function() {
   $('.sliderWrap').slick({
     slidesToShow: 3,
@@ -98,22 +109,24 @@ $(function() {
     vertical: false,
     prevArrow: "<button type= 'button' class='slick-prev'>prev</button>",
     nextArrow: "<button type= 'button' class='slick-next'></button>",
-    draggable: true, 
+    draggable: true,
+
     responsive: [ //반응형 웹 구현 옵션
       {
         breakpoint: 768, //768px 이하
         settings: { //위에 옵션이 디폴트, 여기에 추가하면 그걸로 변경
           slidesToShow: 3, //슬라이드 3개 보이고
-          arrows: false, //좌우 버튼 보이지 않기
+          slidesToScroll: 3,
         }
       },
       {
         breakpoint: 600, //600px 이하
         settings: {
           slidesToShow: 1, //슬라이드 1개 보이고
-          arrows: true, //좌우 버튼 보이기
+          slidesToScroll: 1, //슬라이드 1개씩 넘기기
         }
       }
     ]
+
   });
 });

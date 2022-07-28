@@ -8,7 +8,6 @@
 
 body {
   width: 100vw;
-  height: 100vh;
   font-family: 'Black Han Sans', sans-serif;
   font-size: 2vw;
   overflow-x: hidden; 
@@ -149,7 +148,7 @@ button {
   width: auto;
   height: auto;
   margin-left: 2%;
-  margin-right: 17%;
+  /* margin-right: 17%; */
 }
 
 .textWrap .h1 {
@@ -407,7 +406,6 @@ button {
   letter-spacing: 2.5px;
   color: #fff;
   text-align: left;
-  /* margin-left: 12%; */
   margin-left: 17%;
 }
 
@@ -416,7 +414,6 @@ button {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 20%;
-  /* margin-left: 15%; */
   margin-left: 20%;
   margin-bottom: 5%;
 }
@@ -431,12 +428,18 @@ button {
   transition: .5s;
 }
 
+/* 마커 사이즈 */
+.icons li::marker {
+  font-size: 3rem;
+}
+
 .icons ul {
   position: absolute;
   left: 60%;
 }
 
 .icons li {
+  margin-bottom: 6%;
   font-size: 33px;
   color: #FFFFCC;
   letter-spacing: 1.8px;
@@ -444,11 +447,6 @@ button {
   text-align: left;
   list-style-type: '👉';
   padding-inline-start: 1ch;
-}
-
-/* 마커 사이즈 */
-.icons li::marker {
-  font-size: 3rem;
 }
 
 .portfolioWrap {
@@ -553,36 +551,160 @@ footer {
   text-align: center;
 } 
 
-footer .h3 {
+.footerLine {
   width: 80%;
   border: thin solid #b9b8b8;
   margin-left: 10%;
   margin-bottom: 2%;
-} 
+}
 
 
-/* 반응형 웹 디자인 사이즈 데스크톱 우선순위 */
-@media screen and (min-width: 765px) {
+
+
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
   .openBtn {
     display: none;
   }
 
+  .imageSection {
+    position: absolute;
+    margin-left: 57%;
+  }
+
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #sideNav {
+    display: none;
+  }
+  
+  .contentWrap {
+    padding-left: 0;
+  }
+
   .textSection {
-    margin-left: 5%;
+    margin-top: 25%;
+  }
+
+  .textWrap {
+    width: 40%;
+    margin-left: 3%;
   }
 
   .textWrap .h2 {
-    /* width: 60%; */
+    font-size: 5vw;
+  }
+
+  .textWrap .h1 {
+    font-size: 7.5vw;
+  }
+
+  .textWrap P {
+    padding-bottom: 15%;
+    font-size: 3vw;
   }
 
   .imageSection {
     position: absolute;
+    top: 7%;
     margin-left: 55%;
   }
+
+  .hjMemoji {
+    width: 35vw;
+  }
+
+  .aboutWrap {
+    padding: 3% 5% 4% 5%;
+  }
+
+  .hjPhoto {
+    width: 30%;
+  }
+ 
+  .aboutText p {
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-size: 3vw;
+  }
+
+  .skillsWrap h2 {
+    font-size: 6.5vw;
+    margin-left: 7%;
+    padding-top: 0;
+    padding-bottom: 3%;
+  }
+  
+  .icons {
+    margin-left: 17%;
+  }
+
+  .icons img {
+    width: 50%;
+  }
+
+  .icons li::marker {
+    font-size: 2vw;
+  }
+
+  .icons ul {
+    left: 58%;
+    margin-right: 3%;
+  }
+  
+  .icons li {
+    margin-top: 5%;
+    margin-bottom: 25%;
+    font-size: 2.4vw;
+  }
+  
+  .portfolioWrap h2 {
+    font-size: 6.5vw;
+    margin-left: 6%;
+    margin-bottom: 4%;
+  }
+  
+  .sliderWrap {
+    width: 75%;
+    height: 20%;
+  }
+
+  .title {
+    font-size: 2.7vw;
+  }
+  
+  .sub {
+    font-size: 2vw;
+  }
+  
+  .contactWrap h2 {
+    font-size: 7vw;
+  }
+  
+  .contactWrap .h3 {
+    font-size: 5vw;
+    padding-bottom: 7%;
+  }
+  
+  .kakaoBtn {
+    width: 50%;
+    margin-left: 25%;
+    font-size: 3.5vw;
+  }
+  
+  footer {
+    font-size: 2vw;
+    padding: 4%;
+  } 
+   
 }
 
-
-@media screen and (max-width: 1047px) {
+/* Mobile */
+@media screen and (max-width: 767px) {
   #sideNav {
     display: none;
   }
@@ -596,39 +718,160 @@ footer .h3 {
   }
 
   .textSection {
-    margin-top: 30%;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .textWrap {
-    margin-left: 5%;
-    margin-right: 0;
+    margin: 50% 0 70% 0;
   }
 
   .textWrap .h2 {
     width: 60%;
-    font-size: 5vw;
+    font-size: 5.5vw;
   }
 
   .textWrap .h1{
-    font-size: 7vw;
+    font-size: 7.5vw;
   }
 
   .textWrap p {
-    font-size: 20px;
+    margin-bottom: 10%;
+    font-size: 4vw;
   }
 
   .imageSection {
     position: absolute;
-    top: 15%;
-    margin-left: 60%;
+    top: 10%;
+    margin-left: 55%;
+  }
+
+  .hjMemoji {
+    width: 35vw;
+  }
+
+  .maileBtn {
+    font-size: 3vw;
+  }
+
+  .maileBtn > span {
+    font-size: 3vw;
+  }
+
+  .aboutWrap {
+    width: 90%;
+    padding: 3% 5% 4% 5%;
+    margin: 30% 2.5% 40% 0;
+  }
+  
+  .aboutWrap h2 {
+    font-size: 8vw;
+  }
+  
+  .hjPhoto {
+    width: 45%;
+    margin-top: 10%;
+  }
+  
+  .aboutText p {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 5vw;
+  }
+  
+  .aboutGit {
+    font-size: 4vw;
+    margin-top: 3%;
+    margin-left: 5%;
+  }
+
+  .aboutBlog {
+    float: right;
+    font-size: 4vw;
+    margin-top: 3%;
+    margin-right: 10%;
+  }
+  
+  .skillsWrap {
+    margin: 50% 0 50% 0;
+  }
+
+  .skillsWrap h2 {
+    font-size: 6.5vw;
+    margin-left: 6%;
+  }
+  
+  .icons {
+    width: 5%;
+    margin-left: 25%;
+  }
+  
+  .icons img {
+    margin-bottom: 100%;
+  }
+
+  .icons li::marker {
+    font-size: 3vw;
+  }
+
+  .icons ul {
+    left: 60%;
+    margin-right: 5%;
+  }
+  
+  .icons li {
+    font-size: 3.5vw;
+    margin-bottom: 45%;
+  }
+
+  .portfolioWrap {
+    margin: 60% 0 80% 0;
+  }
+  
+  .portfolioWrap h2 {
+    font-size: 6vw;
+    margin-left: 6%;
+    margin-bottom: 4%;
+  }
+  
+  .sliderWrap {
+    width: 70%;
+    height: 20%;
+  }
+
+  .title {
+    font-size: 4vw;
+  }
+  
+  .sub {
+    font-size: 3.5vw;
+  }
+
+  .contactWrap {
+    padding: 10%;
+  }
+  
+  .contactWrap h2 {
+    margin-top: 40%;
+    margin-bottom: 5%;
+    font-size: 10vw;
+  }
+  
+  .contactWrap .h3 {
+    font-size: 7vw;
+    padding-bottom: 7%;
+  }
+  
+  .kakaoBtn {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    font-size: 5vw;
+  }
+  
+  footer {
+    font-size: 3.2vw;
+    padding: 10%;
+  } 
+  .footerLine {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
   }
 }
-
-/* @media screen and (max-width: 479px) {
- .textWrap {
-    font-size: 14vw;
- }
-
-} */
