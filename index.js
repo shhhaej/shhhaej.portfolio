@@ -1,11 +1,18 @@
-//When change window screen size view, show burgerNav
+//버거바 메뉴 
 function openNav() {
-  document.getElementById("burgerNav").style.height = "100%";
+  document.getElementById('burgerNav').style.height = '100%';
 }
 
 function closeNav() {
-  document.getElementById("burgerNav").style.height = "0%";
+  document.getElementById('burgerNav').style.height = '0%';
 }
+
+//bergerNar
+// $(function() {
+//   $('a').click(function() {
+//     $('#burgerNav').toggle();
+//   })
+// });
 
 
 
@@ -42,7 +49,6 @@ function openLoading(gif) {
   $('#mask').css({
       'width' : maskWidth,
       'height': maskHeight,
-      // 'opacity' : '0.9'
       'background' : '#ff9933',
   });
 
@@ -61,21 +67,21 @@ function openLoading(gif) {
 
 
 
-//textSection 화면 효과
+//텍스트 섹션 스크린 효과
 $(function() {
-  $("#contextWrap").on("click", function() { 
-    $(".textSection").fadeOut(1000).delay(1000).fadeIn(2000);
+  $('#contextWrap').on("click", function() { 
+    $('.textSection').fadeOut(1000).delay(1000).fadeIn(2000);
           // a가 textSection 요소를 1초에 걸쳐 사라지게 하고
           // 1초의 지연시간 뒤에 다시 2초 걸쳐 나타남
   });
-})
+});
 
 
 
 //네비게이션 메뉴 클릭시 해당 섹션 이동
 $(function(){
-    $("a").on("click", function(){
-      var divName = $(this).attr("id"),
+    $('a').on('click', function(){
+      var divName = $(this).attr('id'),
           topPosition = $("." + divName).offset().top;
       $('html, body').animate({
           scrollTop: topPosition - 55
@@ -84,20 +90,11 @@ $(function(){
     });
 });
 
-$(function(){
-  $("#home").on("click", function(){
-    var divName = $(this).attr("id"),
-        topPosition = $("." + divName).offset().top;
-    $('html, body').animate({
-        scrollTop: topPosition - 55
-    }, 700);
-    return false; //리턴펄스로 스크롤이 최상위로 갔다가 돌아오는 현상 없어짐
-  });
-});
 
 
 
-//slick slider
+
+//슬릭 슬라이더
 $(function() {
   $('.sliderWrap').slick({
     slidesToShow: 3,
