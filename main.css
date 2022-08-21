@@ -39,6 +39,7 @@ button {
   outline: inherit;
 }
 
+/********* Navigation bar *********/
 #sideNav {
   height: 100%;
   width: 120px;
@@ -69,6 +70,7 @@ button {
   color: #333366;
 }
 
+/********* Overlay *********/
 .overlay {
   height: 0%;
   width: 100%;
@@ -125,6 +127,7 @@ button {
   z-index: 11;
 }
 
+/********* Content section *********/
 .contentWrap {
   width: auto;
   height: auto;
@@ -149,7 +152,6 @@ button {
   width: auto;
   height: auto;
   margin-left: 2%;
-  /* margin-right: 17%; */
 }
 
 .textWrap .h1 {
@@ -307,6 +309,7 @@ button {
   z-index: 101;
 }
 
+/********* About me section *********/
 .aboutWrap {
   position: relative;
   width: 80%;
@@ -393,6 +396,7 @@ button {
   transform: scaleX(1);
 }
 
+/********* My skills section *********/
 .skillsWrap {
   width: auto;
   height: auto;
@@ -450,6 +454,7 @@ button {
   padding-inline-start: 1ch;
 }
 
+/********* Portfolio section *********/
 .portfolioWrap {
   width: auto;
   height: auto;
@@ -507,6 +512,7 @@ button {
   font-weight: 700;
 }
 
+/********* Contact section *********/
 .contactWrap {
   width: auto;
   height: auto;
@@ -543,6 +549,7 @@ button {
   color: #fffb08;
 }
 
+/********* Footer *********/
 footer {
   position: relative;
   background-color: #FF9933;
